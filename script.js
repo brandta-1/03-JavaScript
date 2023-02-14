@@ -19,7 +19,7 @@ buttons[0].onclick = function () {
   event.preventDefault();
 
   // put possible characters into an array
-  var choices = [chars];
+  var choices = [];
   //clear any error messages
   const errorMsg = document.getElementById("error-message");
   errorMsg.textContent = "";
@@ -33,12 +33,15 @@ buttons[0].onclick = function () {
   const specsYN = userForm["spec"].checked;
 
   //verify form selections
-  if (!lCase && !uCase || charsLength < 8 || charsLength > 128) {
-    errorMsg.textContent = "characters must be between 8 and 128 inclusive. Check atleast 1 of lowercase or uppercase";
+  if (!lCase && !uCase && !numsYN && !specsYN || charsLength < 8 || charsLength > 128) {
+    errorMsg.textContent = "characters must be between 8 and 128 inclusive. Check atleast 1 character type";
     return;
   }
 
   //add pools of characters to possible choices based on form input
+  if(lCase || uCase){
+    choices[choices.length] = chars;
+  }
   if (numsYN) {
     choices[choices.length] = nums;
   }

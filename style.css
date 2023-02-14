@@ -101,6 +101,7 @@ button[disabled] {
   display: none;
 }
 
+/* modal appears in the center of the page once user clicks generate password*/
 .modal{
   position: absolute;
   width: fit-content;
