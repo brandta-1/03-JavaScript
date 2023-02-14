@@ -7,6 +7,7 @@ Live website: https://brandta-1.github.io/03-JavaScript/
 * Website includes the following HTML per acceptance criteria:
     * password generation textarea
     * password generation form choices:
+        * length
         * lowercase
         * uppercase
         * numbers
