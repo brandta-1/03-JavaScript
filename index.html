@@ -23,6 +23,7 @@
         <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
       </div>
       <div class="card-footer">
+        <!-- this modal appears with password generation options-->
         <div class="modal" id="hidden">
           <form name="user-form">
             <label>Enter # of characters</label>
@@ -37,6 +38,7 @@
             <input name="spec" type="checkbox"><br>
             <input class="btn" type="submit" value="submit"><br>
           </form>
+          <!--this error message appears for invalid generation choices-->
           <p id="error-message"></p>
         </div>
         <button id="generate" class="btn">Generate Password</button>
